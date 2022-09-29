@@ -261,3 +261,120 @@ h1{
         background-color: purple;
     }
 }
+
+.wrapper-4{
+    min-height: 100vh;
+    min-width: 50vw;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10% 60% 1fr ;
+    margin: 1rem;
+    gap: 1rem;
+    grid-template-areas: 
+    " header header header "
+    " main main main "
+    " footer footer footer ";
+}
+
+.header-4{
+    grid-area: header;
+    margin: 1rem 0 0 1rem;
+}
+
+.circle-4{
+    background-color: blueviolet;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    margin: 0;
+}
+
+.main-4{
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem 1rem 1rem;
+    gap: 2rem;
+    grid-area: main;
+}
+
+.top-4{
+    display: flex;
+    width: 100%;
+    min-height: 80%;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.box-4{
+    width: 49%;
+    min-height: 20%;
+    background-color: purple;
+}
+
+.box-5{
+    width: 49%;
+    min-height: 20%;
+    background-color: pink;
+}
+
+.bottom-4{
+    display: flex;
+    width: 100%;
+    min-height: 10%;
+    justify-content: center;
+}
+
+.rectangle-4{
+    min-width: 20%;
+    min-height: 10%;
+    background-color: rgb(168, 58, 168);
+    border-radius: 1.5rem;
+}
+
+.footer-4{
+    background-color: lightgreen;
+    grid-area: footer;
+}
+
+@media screen and (max-width:600px) {
+    .header-4{
+        justify-self: center;
+        margin: 0;
+    }
+
+    .main-4{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        gap: 1rem;
+        grid-area: main;
+    }
+
+    .box-4{
+        width: 100%;
+        min-height: 20%;
+        background-color: purple;
+    }
+    
+    .box-5{
+        width: 100%;
+        min-height: 20%;
+        background-color: pink;
+    }
+
+    .bottom-4{
+        display: flex;
+        width: 100%;
+        min-height: 10%;
+        justify-content: center;
+        align-self: flex-end;
+    }
+
+    .rectangle-4{
+        min-width: 30%;
+        min-height: 10%;
+        background-color: rgb(168, 58, 168);
+        border-radius: 1.5rem;
+    }
+}
